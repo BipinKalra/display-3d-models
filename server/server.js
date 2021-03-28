@@ -24,6 +24,8 @@ io.on("connection", function (socket) {
     count++;
 
     socket.emit("counter", { count: count });
+
+    console.log("Connected");
   }
 
   socket.on("disconnect", function () {
@@ -33,6 +35,8 @@ io.on("connection", function (socket) {
       count--;
 
       socket.emit("counter", { count: count });
+
+      console.log("Disconnected");
     }
   });
 });

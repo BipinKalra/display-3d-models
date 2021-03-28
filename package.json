@@ -20,7 +20,7 @@
   "homepage": "https://github.com/BipinKalra/display-3d-models#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^4.0.0"
+    "socket.io": "^2.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
