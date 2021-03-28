@@ -102,16 +102,30 @@
       style="background: rgba(255, 255, 255, 0.5)"
     >
       <div class="row no-gutters align-items-center justify-content-between">
-        <div class="heading-2 pointer" id="prev-button">&lt;</div>
-        <div>
-          <button class="button-primary" id="stop-feed">Start Feed</button>
-          <button class="button-tertiary ml-20" id="toggle-feed">
-            Toggle Camera
-          </button>
+        <div class="heading-2 pointer" id="prev-button">
+          <img
+            src="https://cb-thumbnails.s3.ap-south-1.amazonaws.com/nav-left-black.svg"
+          />
         </div>
-        <div class="heading-2 pointer" id="next-button">&gt;</div>
+        <div
+          class="row no-gutters align-items-center justify-content-center flex-1"
+        >
+          <div>
+            <button class="button-primary" id="stop-feed">Start Feed</button>
+            <button class="button-tertiary ml-20" id="toggle-feed">
+              Toggle Camera
+            </button>
+            <div class="t-align-c font-4 mt-10">
+              Currently Live Viewers : <span id="counter"></span>
+            </div>
+          </div>
+        </div>
+        <div class="heading-2 pointer" id="next-button">
+          <img
+            src="https://cb-thumbnails.s3.ap-south-1.amazonaws.com/nav-right-black.svg"
+          />
+        </div>
       </div>
-      <h1>Counter : <span id="counter"></span></h1>
     </div>
 
     <script type="text/javascript">
