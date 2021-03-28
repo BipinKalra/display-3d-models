@@ -39,6 +39,6 @@ io.on("connection", function (socket) {
 
 app.use(express.static(publicPath));
 
-server.listen(3000, () => {
-  console.log("listening at 3000");
+server.listen(port, () => {
+  console.log("Server is up on port - " + port);
 });

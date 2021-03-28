@@ -21,7 +21,6 @@
     />
   </head>
   <body class="a-cbm bg-black">
-    <!-- <h1>Counter : <span id="counter"></span></h1> -->
     <div class="h-100 w-100 all-center position-relative">
       <a-scene class="w-100 h-100">
         <a-entity
@@ -112,15 +111,16 @@
         </div>
         <div class="heading-2 pointer" id="next-button">&gt;</div>
       </div>
+      <h1>Counter : <span id="counter"></span></h1>
     </div>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       var socket = io.connect("http://localhost:3000");
 
       socket.on("counter", function (data) {
         $("#counter").text(data.count);
       });
-    </script> -->
+    </script>
 
     <script src="./script.js"></script>
   </body>
