@@ -13,16 +13,115 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"
     ></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coding-blocks/motley@2.8.0/dist/coding-blocks/app.min.css"
+    />
   </head>
-  <body>
-    <h1>Counter : <span id="counter"></span></h1>
+  <body class="a-cbm bg-black">
+    <!-- <h1>Counter : <span id="counter"></span></h1> -->
+    <div class="h-100 w-100 all-center position-relative">
+      <a-scene class="w-100 h-100">
+        <a-entity
+          class="model"
+          scale="0.05 0.05 0.05"
+          position="0 -2 0"
+          visible="false"
+          id="model1"
+          rotation="0 -90 0"
+        >
+          <a-gltf-model
+            src="https://cdn.glitch.com/11596a34-a2c8-49d5-a8ce-a21be9f4043a%2Fwall_storage_large.glb?v=1616578131316"
+          ></a-gltf-model>
+        </a-entity>
 
-    <script type="text/javascript">
+        <a-entity
+          class="model"
+          scale="5 5 5"
+          position="0 -2 0"
+          visible="false"
+          id="model2"
+          rotation="0 -135 0"
+        >
+          <a-gltf-model
+            src="https://cdn.glitch.com/b64460ed-99b8-42da-8433-7162194c11ca%2Fsingle_seater_chair.glb?v=1616763280904"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity
+          class="model"
+          scale="0.025 0.025 0.025"
+          position="0 -2 0"
+          visible="false"
+          id="model3"
+          rotation="0 180 0"
+        >
+          <a-gltf-model
+            src="https://cdn.glitch.com/b64460ed-99b8-42da-8433-7162194c11ca%2Fsofa_bed.glb?v=1616763273774"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity
+          class="model"
+          scale="5 5 5"
+          position="0 -2 0"
+          visible="false"
+          id="model4"
+          rotation="0 -90 0"
+        >
+          <a-gltf-model
+            src="https://cdn.glitch.com/b64460ed-99b8-42da-8433-7162194c11ca%2Fcoffe_table.glb?v=1616763296198"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity
+          class="model"
+          scale="5 5 5"
+          position="0 -2 0"
+          visible="false"
+          id="model5"
+          rotation="0 180 0"
+        >
+          <a-gltf-model
+            src="https://cdn.glitch.com/b64460ed-99b8-42da-8433-7162194c11ca%2Fliving_room_chair.glb?v=1616763288664"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity camera orbit-controls="initialPosition: 0 0 -5"></a-entity>
+      </a-scene>
+      <video
+        id="webcam"
+        autoplay
+        playsinline
+        class="position-absolute z-neg h-100 w-100"
+      ></video>
+    </div>
+    <div
+      class="position-fixed tl w-100 px-50 py-25"
+      style="background: rgba(255, 255, 255, 0.5)"
+    >
+      <div class="row no-gutters align-items-center justify-content-between">
+        <div class="heading-2 pointer" id="prev-button">&lt;</div>
+        <div>
+          <button class="button-primary" id="stop-feed">Start Feed</button>
+          <button class="button-tertiary ml-20" id="toggle-feed">
+            Toggle Camera
+          </button>
+        </div>
+        <div class="heading-2 pointer" id="next-button">&gt;</div>
+      </div>
+    </div>
+
+    <!-- <script type="text/javascript">
       var socket = io.connect("http://localhost:3000");
 
       socket.on("counter", function (data) {
         $("#counter").text(data.count);
       });
-    </script>
+    </script> -->
+
+    <script src="./script.js"></script>
   </body>
 </html>
