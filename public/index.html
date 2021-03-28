@@ -129,7 +129,7 @@
     </div>
 
     <script type="text/javascript">
-      var socket = io.connect("http://localhost:3000");
+      var socket = io.connect("https://bipin-display-3d-models.herokuapp.com/");
 
       socket.on("counter", function (data) {
         $("#counter").text(data.count);
